@@ -47,7 +47,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: dockerhub push    
-      run: docker push ${{ env.CONTAINER }}
+      run: docker push ${{ env.IMAGE }}
 
   deploy:
     needs: build
